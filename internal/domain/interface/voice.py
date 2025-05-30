@@ -6,7 +6,7 @@ from internal.domain.entities.voice import Voice
 class VoiceInterface(ABC):
 
     @abstractmethod
-    def CreateVoice(self, voice: VoiceValidator)-> Voice:
+    def CreateVoice(self, voice: VoiceValidator)-> str:
         pass
 
     @abstractmethod
@@ -18,5 +18,5 @@ class VoiceInterface(ABC):
         pass
 
     @abstractmethod
-    def DeleteVoice(self, filename: str)-> Voice:
+    def DeleteVoice(self, filename: str)-> str:
         pass

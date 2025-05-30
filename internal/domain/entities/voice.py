@@ -1,4 +1,4 @@
-class Voice():
+class Voice:
     def __init__(self, filename, format, duration, expires_at):
         self.filename = filename
         self.format= format
