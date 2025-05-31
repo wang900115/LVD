@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 from typing import List
 from internal.domain.entities.voice import Voice
-from internal.adapter.sqlachemy.model.voice import VoiceTable
+from internal.adapter.sqlalchemy.model.voice import VoiceTable
+
 class VoiceInterface(ABC):
 
     @abstractmethod

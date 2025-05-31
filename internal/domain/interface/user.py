@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from internal.domain.entities.user import User
+from internal.adapter.sqlalchemy.model.user import UserTable
 
 class UserInterface(ABC):
 
@@ -8,7 +9,7 @@ class UserInterface(ABC):
         pass
 
     @abstractmethod
-    def QueryUser(self, username: str)-> User:
+    def QueryUser(self, username: str)-> UserTable:
         pass
 
     @abstractmethod

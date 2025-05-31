@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from werkzeug.security import check_password_hash, generate_password_hash
 from internal.domain.interface.user import UserInterface
-from internal.adapter.sqlachemy.model.user import UserTable
+from internal.adapter.sqlalchemy.model.user import UserTable
 from internal.domain.entities.user import User
-from internal.adapter.sqlachemy.validtor.user import UserValidator
+from internal.adapter.sqlalchemy.validtor.user import UserValidator
 
 class UserImplement(UserInterface):
 
