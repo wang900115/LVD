@@ -1,19 +1,18 @@
 from abc import ABC, abstractmethod
-from internal.adapter.sqlachemy.validtor.user import UserValidator
 from internal.domain.entities.user import User
 
 class UserInterface(ABC):
 
     @abstractmethod
-    def CreateUser(self, user: UserValidator)-> User:
+    def CreateUser(self, user: User)-> User:
         pass
 
     @abstractmethod
-    def QueryUser(self, id: int)-> User:
+    def QueryUser(self, username: str)-> User:
         pass
 
     @abstractmethod
-    def UpdateUser(self, user: UserValidator)-> User:
+    def UpdateUser(self, user: User)-> User:
         pass
 
     @abstractmethod

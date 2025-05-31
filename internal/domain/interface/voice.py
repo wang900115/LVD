@@ -1,20 +1,19 @@
 from abc import ABC, abstractmethod
 from typing import List
-from internal.adapter.sqlachemy.validtor.voice import VoiceValidator
 from internal.domain.entities.voice import Voice
-
+from internal.adapter.sqlachemy.model.voice import VoiceTable
 class VoiceInterface(ABC):
 
     @abstractmethod
-    def CreateVoice(self, voice: VoiceValidator)-> str:
+    def CreateVoice(self, voice: Voice)-> Voice:
         pass
 
     @abstractmethod
-    def QueryVoices(self)-> List[Voice]:
+    def QueryVoices(self, user_id: int)-> List[Voice]:
         pass
 
     @abstractmethod
-    def QueryVoice(self, filename: str)->Voice:
+    def QueryVoice(self, filename: str)->VoiceTable:
         pass
 
     @abstractmethod

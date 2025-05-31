@@ -1,5 +1,6 @@
 class Voice:
-    def __init__(self, filename, format, duration, expires_at):
+    def __init__(self, user_id, filename, format, duration, expires_at):
+        self.user_id = user_id
         self.filename = filename
         self.format= format
         self.duration = duration

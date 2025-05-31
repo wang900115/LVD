@@ -8,5 +8,5 @@ class VoiceValidator(BaseModel):
     duration: float
     filesize: float
 
-    upload_at: datetime
+    uploaded_at: datetime
     expires_at: datetime

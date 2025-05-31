@@ -11,8 +11,8 @@ class VoiceUsecase:
     def CreateVoice(self, voice: VoiceValidator)-> str:
         return self.usecase.CreateVoice(voice)
 
-    def QueryVoices(self) -> List[Voice]:
-        return self.usecase.QueryVoices()
+    def QueryVoices(self, user_id: int) -> List[Voice]:
+        return self.usecase.QueryVoices(user_id)
     
     def QueryVoice(self,filename: str)-> Voice:
         return self.usecase.QueryVoice(filename)
