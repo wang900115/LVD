@@ -1,5 +1,4 @@
 from internal.domain.interface.voice import VoiceInterface
-from internal.adapter.sqlachemy.validtor.voice import VoiceValidator
 from internal.domain.entities.voice import Voice
 from typing import List
 
@@ -8,7 +7,7 @@ class VoiceUsecase:
     def __init__(self, usecase: VoiceInterface):
         self.usecase = usecase
     
-    def CreateVoice(self, voice: VoiceValidator)-> str:
+    def CreateVoice(self, voice: Voice)-> str:
         return self.usecase.CreateVoice(voice)
 
     def QueryVoices(self, user_id: int) -> List[Voice]:
