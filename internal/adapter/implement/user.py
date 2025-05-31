@@ -48,9 +48,7 @@ class UserImplement(UserInterface):
             raise ValueError("password wrong")
         return resultUser.Domain()
     
-    def Logout(self, username: str) -> User:
-        resultUser = self.QueryUser(username)
-        return resultUser.Domain()
+
 
         
 

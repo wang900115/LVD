@@ -21,5 +21,3 @@ class UserUsecase:
     def Login(self,username: str, password: str) -> User :
         return self.usecase.Login(username, password)
     
-    def Logout(self,username: str) -> User :
-        return self.usecase.Logout(username)

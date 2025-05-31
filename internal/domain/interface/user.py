@@ -22,7 +22,3 @@ class UserInterface(ABC):
     @abstractmethod
     def Login(self, username: str, password: str)-> User:
         pass
-
-    @abstractmethod
-    def Logout(self, username: str)-> User:
-        pass

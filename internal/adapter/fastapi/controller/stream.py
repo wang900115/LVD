@@ -1,6 +1,6 @@
 from internal.application.usecase.voice import VoiceUsecase
 from internal.adapter.audio.gcs import GCS
-
+from internal.adapter.fastapi.validator.stream import DeleteRequest, StreamRequest
 
 class StreamController:
 
@@ -11,8 +11,8 @@ class StreamController:
     def Upload(self, request):
         pass
 
-    def Delete(self, request):
+    def Delete(self, request: DeleteRequest):
         pass
 
-    def Stream(self, request):
+    def Stream(self, request: StreamRequest):
         pass
