@@ -1,6 +1,7 @@
 from internal.domain.interface.voice import VoiceInterface
 from internal.domain.entities.voice import Voice
 from typing import List
+from internal.adapter.sqlalchemy.model.voice import VoiceTable
 
 class VoiceUsecase:
 
@@ -13,7 +14,7 @@ class VoiceUsecase:
     def QueryVoices(self, user_id: int) -> List[Voice]:
         return self.usecase.QueryVoices(user_id)
     
-    def QueryVoice(self,filename: str)-> Voice:
+    def QueryVoice(self,filename: str)-> VoiceTable:
         return self.usecase.QueryVoice(filename)
     
     def DeleteVoice(self, filename: str) -> str:

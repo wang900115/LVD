@@ -10,6 +10,7 @@ mysql:
   user: "mysql"
   password: "example"
   host: "mysql"
+  port: 3306
   name: "LVD"
   debug: true
 
@@ -17,13 +18,15 @@ mysql:
 redis:
   user: ""
   password: ""
-  host: "redis:6379"
+  host: "redis"
+  port: 6379
   database: 0
   idleTimeout: "200s"
 
 log:
   log_path: "../log/app.log"
   application_name: "LVD"
+  level: "INFO"
   debug: true
 
 jwt: 
