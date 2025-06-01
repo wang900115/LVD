@@ -1,9 +1,6 @@
 from google.cloud import storage
 from typing import BinaryIO
 
-BUCKET_NAME = "LVD"
-
-
 # def downloadAudioStream(blobName: str) -> BinaryIO:
 #     client = storage.Client()
 #     bucket = client.bucket(BUCKET_NAME)
@@ -13,9 +10,9 @@ BUCKET_NAME = "LVD"
 
 class GCS:
 
-    def __init__(self):
+    def __init__(self, buckName: str):
         self.client = storage.Client()
-        self.bucket = self.client.bucket("LVD")
+        self.bucket = self.client.bucket(buckName)
 
     def Upload(self, file: bytes, filename: str, type: str) -> None:
         blob = self.bucket.blob(filename)
