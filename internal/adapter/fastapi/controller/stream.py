@@ -1,5 +1,5 @@
 from internal.application.usecase.voice import VoiceUsecase
-from internal.adapter.audio.gcs import GCS
+from internal.adapter.gcs.gcs import GCS
 from internal.adapter.fastapi.validator.stream import DeleteRequest, StreamRequest
 
 class StreamController:
