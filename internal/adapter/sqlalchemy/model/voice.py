@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Text, Float, DateTime
+from sqlalchemy import Column, Integer, String, Text, Float, DateTime, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from .....internal.domain.entities.voice import Voice
 
@@ -8,7 +8,7 @@ class VoiceTable(Base):
     __tablename__= 'voice'
 
     id = Column(Integer, primary_key=True, autoincrement=True)
-    user_id = Column(Integer, nullable=False)
+    user_id = Column(Integer, ForeignKey('user.id'), nullable=False)
 
     filename = Column(Text, nullable=False)
     format = Column(String(10), nullable=False)
@@ -20,6 +20,7 @@ class VoiceTable(Base):
 
     def Domain(self):
         return Voice(
+            user_id=None,
             filename=self.filename,
             format=self.format,
             duration=self.duration,

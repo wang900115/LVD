@@ -9,6 +9,7 @@ class AppSettings:
 
 @dataclass
 class ServerSettings:
+    host: str
     http_port: int
     read_header_timeout: str
 

@@ -2,8 +2,10 @@
 __pycache__/
 *.py[cod]
 *$py.class
+
 # C extensions
 *.so
+
 # local env
 ./test
 ./env
@@ -12,3 +14,4 @@ __pycache__/
 # secrets 
 *.json
 *.env
+*.yaml

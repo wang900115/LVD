@@ -5,16 +5,18 @@ from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 
 class JWTMiddleware(BaseHTTPMiddleware):
-    def __init__(self, app, tokenUsecase: TokenUsecase, response: JsonResponse):
-        super().__init__(app)
+    def __init__(self, tokenUsecase: TokenUsecase, response: JsonResponse):
+
         self.tokenUsecase = tokenUsecase
         self.response = response
 
-    async def dispatch(self, request, call_next):
+    async def dispatch(self, request: Request, call_next):
         try:
             token = self._extractToken(request)
             token_data = self.tokenUsecase.ValidateToken(token)
             
+
+            request.state.token = token
             request.state.username = token_data.username
             request.state.expires_at = token_data.expires_at
         

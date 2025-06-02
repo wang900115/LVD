@@ -14,5 +14,8 @@ class UserTable(Base):
 
     def Domain(self):
         return User(
-            username=self.username
+            id = self.id,
+            username=self.username,
+            password=None,
+            email = None
         )

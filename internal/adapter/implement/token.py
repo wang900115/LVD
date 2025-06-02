@@ -14,43 +14,52 @@ class TokenImplement(TokenInterface):
     def __init__(self,
                  client: redis.Redis,
                  base_secret: str,
-                 duration: float = 30):
+                 config: dict):
         self.client = client
         self.base_secret = base_secret
-        self.duration = duration
+        self.duration = self._parseTimeout(config.get("expiration","24h"))
 
+    def _parseTimeout(self, time: str) -> float:
+        if time.endswith("s"):
+            return float(time[:-1])
+        elif time.endswith("m"):
+            return float(time[:-1])*60
+        elif time.endswith("h"):
+            return float(time[:-1])*3600
+        
     def generateSalt(self) -> str:
         return secrets.token_hex(16)
 
     def _generateSecret(self, salt: str) -> str:
         return hashlib.sha256((self.base_secret + salt).encode()).hexdigest()
 
-    async def CreateToken(self, tokenClaims: TokenClaims) -> str:
+    def CreateToken(self, tokenClaims: TokenClaims) -> str:
         tokenClaims.expires_at = datetime.now(
             timezone.utc) + timedelta(seconds=self.duration)
         salt = self.generateSalt()
         jti = str(uuid.uuid4())
+
         payload = {
             "user_id": tokenClaims.user_id,
             "username": tokenClaims.username,
             "salt": salt,
             "jti": jti,
-            "exp": int(tokenClaims.expires_at.timestamp)
+            "exp": str(tokenClaims.expires_at.timestamp)
         }
         token = jwt.encode(payload,
                            self._generateSecret(salt),
                            algorithm="HS256")
-        await self.client.setex(f"token:{jti}", self.duration, "active")
+        self.client.setex(f"token:{jti}", int(self.duration), "active")
         return token
 
-    async def ValidateToken(self, token: str) -> TokenClaims:
+    def ValidateToken(self, token: str) -> TokenClaims:
         try:
             payload = jwt.decode(token, options={"verify_signature": False})
             jti = payload.get("jti")
             salt = payload.get("salt")
             if not salt or not jti:
                 raise Exception("Token miss field")
-            exists = await self.client.exists(f"token:{jti}")
+            exists = self.client.exists(f"token:{jti}")
             if not exists:
                 raise Exception("Token have been expired")
             secret = self._generateSecret(salt)
@@ -64,8 +73,8 @@ class TokenImplement(TokenInterface):
         except jwt.InvalidTokenError:
             raise Exception("Invalid Token")
 
-    async def DeleteToken(self, token: str) -> None:
+    def DeleteToken(self, token: str) -> None:
         payload = jwt.decode(token, options={"verify_signature": False})
         jti = payload.get("jti")
         if jti:
-            await self.client.delete(f"token:{jti}")
+            self.client.delete(f"token:{jti}")

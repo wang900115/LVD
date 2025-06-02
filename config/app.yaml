@@ -3,28 +3,29 @@ app:
   cancel_timeout: "5s"
 
 server:
-  http_port: 8080
+  host: "127.0.0.1"
+  http_port: 8000
   read_header_timeout: "5s"
 
 mysql:
-  user: "mysql"
-  password: "example"
-  host: "mysql"
+  user: "root"
+  password: "wang900115"
+  host: "127.0.0.1"
   port: 3306
-  name: "LVD"
+  name: "lvd"
   debug: true
 
 
 redis:
-  user: ""
+  user: "wang900115"
   password: ""
-  host: "redis"
+  host: "127.0.0.1"
   port: 6379
   database: 0
   idleTimeout: "200s"
 
 log:
-  log_path: "../log/app.log"
+  log_path: "C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\log\\app.log"
   application_name: "LVD"
   level: "INFO"
   debug: true

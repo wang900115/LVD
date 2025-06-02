@@ -33,43 +33,43 @@ from ....internal.adapter.fastapi.response.stream import StreamResponse
 class App:
     def __init__(self):
         self.app = FastAPI()
+        self.env = EnvConfig("C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\config\\.env")
+        self.config = AppConfig("C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\config\\app.yaml")
     
     def Setup(self):
-        
-        env = EnvConfig("C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\config\\.env")
-        config = AppConfig("C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\config\\app.yaml")
-        logger = Logger(config.log)
-        mysql = Mysql(config.mysql)
-        redis = RedisPool(config.redis)
-        gcs = GCS(env.BUCKET_NAME)
+        # configuration
+        logger = Logger(self.config.log).Setup()
+        mysql = Mysql(self.config.mysql).Session()()
+        redis = RedisPool(self.config.redis).Client()
+        gcs = GCS(self.env.BUCKET_NAME)
 
 
         jsonResponser = JsonResponse()
         streamResponser = StreamResponse()
-        tokenUsecase = TokenUsecase(TokenImplement(redis, env.BASE_SECRET , config.jwt))
+
+        # bussiness logic
+        tokenUsecase = TokenUsecase(TokenImplement(redis, self.env.BASE_SECRET , self.config.jwt))
         userUsecase = UserUsecase(UserImplement(mysql))
         voiceUsecase = VoiceUsecase(VoiceImplement(mysql))
 
         userController = UserController(userUsecase, tokenUsecase, jsonResponser)
         streamController = StreamController(voiceUsecase, gcs, jsonResponser, streamResponser)
 
-        CORSMid = CORSMiddleware(App)
-        JWTMid  = JWTMiddleware(App,tokenUsecase,jsonResponser)
-        loggerMid = LoggerMiddleware(App, logger)
-        SecureMid = SecureHeaderMiddleware(App)
+        # register middleware
+        JWTMid  = JWTMiddleware(tokenUsecase,jsonResponser)
+        self.app.add_middleware(CORSMiddleware)
+        self.app.add_middleware(LoggerMiddleware, logger=logger)
+        self.app.add_middleware(SecureHeaderMiddleware)
 
-        userRouter = UserRouter(userController, JWTMid).router
+        # register route
+        userRouter = UserRouter(userController,JWTMid).router
         streamRouter = StreamRouter(streamController).router
-
-        self.app.add_middleware(CORSMid)
-        self.app.add_middleware(loggerMid)
-        self.app.add_middleware(SecureMid)
-
         self.app.include_router(userRouter,prefix="/api/v1/user", tags=["user"])
         self.app.include_router(streamRouter,prefix="/api/v1/stream", tags=["stream"])
 
-    def Run(self, host, port):
-        uvicorn.run(app=self.app, host=host, port=port)
+
+    def Run(self):
+        uvicorn.run(app=self.app,host=self.config.server.get("host","0.0.0.0"), port=self.config.server.get("http_port",1111))
 
 
 

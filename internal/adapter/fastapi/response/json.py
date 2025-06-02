@@ -24,7 +24,7 @@ class JsonResponse:
     def _response(self, status_code:int, message: str, data: Any = None, err: Exception = None) -> JSONResponse:
         content = {"message": message}
         if err:
-            content["err"] = err
+            content["err"] = str(err)
         if data:
             content["data"] = data
         return JSONResponse(content=content, status_code=status_code)

@@ -16,7 +16,7 @@ class StreamController:
 
     def Upload(self, request):
         try:
-            voice = self.voiceUsecase.CreateVoice(request.meta)
+            voice = self.voiceUsecase.CreateVoice(request.meta).Dict()
             self.gcsUsecase.Upload(request.data, voice.filename, voice.format)
             return self.jsonresponse.successWithData(Message.createSuccess, voice)
         except Exception as e:
@@ -24,7 +24,7 @@ class StreamController:
 
     def Delete(self, request: DeleteRequest):
         try:
-            voice = self.voiceUsecase.DeleteVoice(request.filename)
+            voice = self.voiceUsecase.DeleteVoice(request.filename).Dict()
             self.gcsUsecase.Delete(voice.filename)
             return self.jsonresponse.successWithData(Message.deleteSuccess, voice)
         except Exception as e:

@@ -1,0 +1,81 @@
+[2025-06-02 18:41:15] INFO - LVD - Logger init success
+[2025-06-02 18:41:28] INFO - LVD - Logger init success
+[2025-06-02 18:41:36] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 501
+[2025-06-02 18:45:19] INFO - LVD - Logger init success
+[2025-06-02 18:45:33] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 18:47:08] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 18:51:01] INFO - LVD - Logger init success
+[2025-06-02 18:51:04] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 18:51:45] INFO - LVD - Logger init success
+[2025-06-02 18:51:52] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 18:52:06] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 18:52:45] INFO - LVD - Logger init success
+[2025-06-02 18:54:04] INFO - LVD - Logger init success
+[2025-06-02 18:55:14] INFO - LVD - Logger init success
+[2025-06-02 18:55:36] INFO - LVD - Logger init success
+[2025-06-02 18:57:21] INFO - LVD - Logger init success
+[2025-06-02 18:57:24] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 18:59:58] INFO - LVD - Logger init success
+[2025-06-02 19:00:01] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:02:37] INFO - LVD - Logger init success
+[2025-06-02 19:02:40] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:08:12] INFO - LVD - Logger init success
+[2025-06-02 19:08:17] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 19:10:02] INFO - LVD - Logger init success
+[2025-06-02 19:10:06] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 19:10:13] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:12:30] INFO - LVD - Logger init success
+[2025-06-02 19:12:38] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:12:44] INFO - LVD - 127.0.0.1 GET http://127.0.0.1:8000/api/v1/user/login 405
+[2025-06-02 19:12:44] INFO - LVD - 127.0.0.1 GET http://127.0.0.1:8000/favicon.ico 404
+[2025-06-02 19:13:23] INFO - LVD - Logger init success
+[2025-06-02 19:13:28] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:13:47] INFO - LVD - Logger init success
+[2025-06-02 19:13:50] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:15:21] INFO - LVD - Logger init success
+[2025-06-02 19:15:23] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:16:37] INFO - LVD - Logger init success
+[2025-06-02 19:16:40] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:17:28] INFO - LVD - Logger init success
+[2025-06-02 19:17:43] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 19:18:30] INFO - LVD - Logger init success
+[2025-06-02 19:18:32] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 19:19:13] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:20:19] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:21:40] INFO - LVD - Logger init success
+[2025-06-02 19:21:42] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:27:07] INFO - LVD - Logger init success
+[2025-06-02 19:27:10] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:29:55] INFO - LVD - Logger init success
+[2025-06-02 19:29:58] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:33:26] INFO - LVD - Logger init success
+[2025-06-02 19:33:28] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:37:03] INFO - LVD - Logger init success
+[2025-06-02 19:37:06] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 19:37:11] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 19:37:38] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 401
+[2025-06-02 19:38:02] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 401
+[2025-06-02 19:43:21] INFO - LVD - Logger init success
+[2025-06-02 19:43:24] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:46:14] INFO - LVD - Logger init success
+[2025-06-02 19:46:18] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:51:00] INFO - LVD - Logger init success
+[2025-06-02 19:51:03] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 19:53:37] INFO - LVD - Logger init success
+[2025-06-02 19:53:50] INFO - LVD - Logger init success
+[2025-06-02 19:54:39] INFO - LVD - Logger init success
+[2025-06-02 19:55:39] INFO - LVD - Logger init success
+[2025-06-02 19:55:44] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 401
+[2025-06-02 19:57:18] INFO - LVD - Logger init success
+[2025-06-02 19:57:43] INFO - LVD - Logger init success
+[2025-06-02 19:57:47] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 19:57:55] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 19:58:05] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 20:07:59] INFO - LVD - Logger init success
+[2025-06-02 20:08:51] INFO - LVD - Logger init success
+[2025-06-02 20:09:20] INFO - LVD - Logger init success
+[2025-06-02 20:09:33] INFO - LVD - Logger init success
+[2025-06-02 20:10:28] INFO - LVD - Logger init success
+[2025-06-02 20:10:32] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 20:10:38] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 20:10:51] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
