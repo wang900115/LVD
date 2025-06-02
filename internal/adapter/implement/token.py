@@ -44,8 +44,9 @@ class TokenImplement(TokenInterface):
             "username": tokenClaims.username,
             "salt": salt,
             "jti": jti,
-            "exp": str(tokenClaims.expires_at.timestamp)
+            "exp": tokenClaims.expires_at
         }
+
         token = jwt.encode(payload,
                            self._generateSecret(salt),
                            algorithm="HS256")
@@ -64,10 +65,11 @@ class TokenImplement(TokenInterface):
                 raise Exception("Token have been expired")
             secret = self._generateSecret(salt)
             verified_payload = jwt.decode(token, secret, algorithms=["HS256"])
+            
             return TokenClaims(user_id=verified_payload["user_id"],
                                username=verified_payload["username"],
-                               expires_at=datetime.utcfromtimestamp(
-                                   verified_payload["expires_at"]))
+                               expires_at=verified_payload["exp"])
+        
         except jwt.ExpiredSignatureError:
             raise Exception("Token have been expired")
         except jwt.InvalidTokenError:

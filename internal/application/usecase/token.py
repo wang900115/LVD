@@ -11,7 +11,7 @@ class TokenUsecase:
         return self.usecase.CreateToken(tokenClaims)
 
     def ValidateToken(self, token: str) -> TokenClaims:
-        return self.ValidateToken(token)
+        return self.usecase.ValidateToken(token)
 
     def DeleteToken(self, token: str) -> None:
         return self.usecase.DeleteToken(token)

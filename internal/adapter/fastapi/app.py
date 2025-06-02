@@ -23,7 +23,6 @@ from ....internal.adapter.fastapi.controller.stream import StreamController
 from ....internal.adapter.fastapi.router.user import UserRouter
 from ....internal.adapter.fastapi.router.stream import StreamRouter
 from ....internal.adapter.fastapi.middleware.cors.cors import CORSMiddleware
-from ....internal.adapter.fastapi.middleware.jwt.jwt import JWTMiddleware
 from ....internal.adapter.fastapi.middleware.logger.logger import LoggerMiddleware
 from ....internal.adapter.fastapi.middleware.secure_header.secure_header import SecureHeaderMiddleware
 from ....internal.adapter.fastapi.response.json import JsonResponse
@@ -43,7 +42,6 @@ class App:
         redis = RedisPool(self.config.redis).Client()
         gcs = GCS(self.env.BUCKET_NAME)
 
-
         jsonResponser = JsonResponse()
         streamResponser = StreamResponse()
 
@@ -56,13 +54,12 @@ class App:
         streamController = StreamController(voiceUsecase, gcs, jsonResponser, streamResponser)
 
         # register middleware
-        JWTMid  = JWTMiddleware(tokenUsecase,jsonResponser)
         self.app.add_middleware(CORSMiddleware)
         self.app.add_middleware(LoggerMiddleware, logger=logger)
         self.app.add_middleware(SecureHeaderMiddleware)
 
         # register route
-        userRouter = UserRouter(userController,JWTMid).router
+        userRouter = UserRouter(userController,tokenUsecase).router
         streamRouter = StreamRouter(streamController).router
         self.app.include_router(userRouter,prefix="/api/v1/user", tags=["user"])
         self.app.include_router(streamRouter,prefix="/api/v1/stream", tags=["stream"])

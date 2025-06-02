@@ -79,3 +79,74 @@
 [2025-06-02 20:10:32] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
 [2025-06-02 20:10:38] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
 [2025-06-02 20:10:51] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 21:48:48] INFO - LVD - Logger init success
+[2025-06-02 21:49:24] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 21:50:07] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:50:10] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:50:15] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:50:17] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:50:39] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:50:49] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 21:51:53] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 21:52:05] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 22:06:45] INFO - LVD - Logger init success
+[2025-06-02 22:08:49] INFO - LVD - Logger init success
+[2025-06-02 22:10:11] INFO - LVD - Logger init success
+[2025-06-02 22:10:39] INFO - LVD - Logger init success
+[2025-06-02 22:11:23] INFO - LVD - Logger init success
+[2025-06-02 22:11:26] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/regist 201
+[2025-06-02 22:11:31] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:11:41] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 422
+[2025-06-02 22:12:55] INFO - LVD - Logger init success
+[2025-06-02 22:13:19] INFO - LVD - Logger init success
+[2025-06-02 22:13:44] INFO - LVD - Logger init success
+[2025-06-02 22:15:50] INFO - LVD - Logger init success
+[2025-06-02 22:18:04] INFO - LVD - Logger init success
+[2025-06-02 22:18:12] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:20:33] INFO - LVD - Logger init success
+[2025-06-02 22:21:08] INFO - LVD - Logger init success
+[2025-06-02 22:21:12] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:21:39] INFO - LVD - Logger init success
+[2025-06-02 22:21:42] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:21:58] INFO - LVD - Logger init success
+[2025-06-02 22:22:00] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:28:15] INFO - LVD - Logger init success
+[2025-06-02 22:28:19] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:28:36] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:28:46] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:29:38] INFO - LVD - Logger init success
+[2025-06-02 22:29:40] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:29:53] INFO - LVD - Logger init success
+[2025-06-02 22:29:54] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:30:44] INFO - LVD - Logger init success
+[2025-06-02 22:30:46] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:31:34] INFO - LVD - Logger init success
+[2025-06-02 22:31:37] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:33:01] INFO - LVD - Logger init success
+[2025-06-02 22:33:03] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:33:22] INFO - LVD - Logger init success
+[2025-06-02 22:33:25] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:36:13] INFO - LVD - Logger init success
+[2025-06-02 22:36:15] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:37:21] INFO - LVD - Logger init success
+[2025-06-02 22:37:22] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:38:18] INFO - LVD - Logger init success
+[2025-06-02 22:38:19] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:38:33] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:38:42] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:39:33] INFO - LVD - Logger init success
+[2025-06-02 22:39:40] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:41:54] INFO - LVD - Logger init success
+[2025-06-02 22:41:55] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:44:21] INFO - LVD - Logger init success
+[2025-06-02 22:44:21] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:45:37] INFO - LVD - Logger init success
+[2025-06-02 22:45:41] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 501
+[2025-06-02 22:45:58] INFO - LVD - Logger init success
+[2025-06-02 22:46:01] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:46:14] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:47:10] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/login 201
+[2025-06-02 22:47:18] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
+[2025-06-02 22:47:57] INFO - LVD - Logger init success
+[2025-06-02 22:47:58] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 200
+[2025-06-02 22:48:14] INFO - LVD - 127.0.0.1 POST http://127.0.0.1:8000/api/v1/user/logout 401
