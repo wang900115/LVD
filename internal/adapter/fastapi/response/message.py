@@ -18,4 +18,6 @@ class Message:
     logoutSuccess = "logout success"
     logoutFail = "logout fail"
 
+    streamFail = "stream fail"
+
     accessDenied = "access denied"
