@@ -12,5 +12,3 @@ class LoginRequest(BaseModel):
     password: str
 
 
-class LogoutRequest(BaseModel):
-    pass
