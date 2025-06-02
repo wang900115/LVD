@@ -1,8 +1,8 @@
 from sqlalchemy.orm import Session 
-from internal.adapter.sqlalchemy.model.voice import VoiceTable
-from internal.domain.entities.voice import Voice
-from internal.domain.interface.voice import VoiceInterface
-from internal.adapter.sqlalchemy.validtor.voice import VoiceValidator
+from ....internal.adapter.sqlalchemy.model.voice import VoiceTable
+from ....internal.domain.entities.voice import Voice
+from ....internal.domain.interface.voice import VoiceInterface
+from ....internal.adapter.sqlalchemy.validtor.voice import VoiceValidator
 from typing import List
 class VoiceImplement(VoiceInterface):
 

@@ -47,11 +47,12 @@ class AppConfig:
         with open(path, 'r') as f:
             raw: dict[str, Any] = yaml.safe_load(f)
 
-        self.app = AppSettings(**raw.get("app",{}))
-        self.server = ServerSettings(**raw.get("server",{}))
-        self.mysql = MySQLSettings(**raw.get("mysql",{}))
-        self.redis = RedisSettings(**raw.get("redis",{}))
-        self.log = LogSettings(**raw.get("log",{}))
-        self.jwt = JwtSettings(**raw.get("jwt",{}))
+        self.app = AppSettings(**raw.get("app",{})).__dict__
+        self.server = ServerSettings(**raw.get("server",{})).__dict__
+        self.mysql = MySQLSettings(**raw.get("mysql",{})).__dict__
+        self.redis = RedisSettings(**raw.get("redis",{})).__dict__
+        self.log = LogSettings(**raw.get("log",{})).__dict__
+        self.jwt = JwtSettings(**raw.get("jwt",{})).__dict__
+        
 
 

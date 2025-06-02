@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text, Float, DateTime
 from sqlalchemy.ext.declarative import declarative_base
-from internal.domain.entities.voice import Voice
+from .....internal.domain.entities.voice import Voice
 
 Base = declarative_base()
 

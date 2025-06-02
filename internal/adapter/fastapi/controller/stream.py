@@ -1,9 +1,9 @@
-from internal.application.usecase.voice import VoiceUsecase
-from internal.adapter.gcs.gcs import GCS
-from internal.adapter.fastapi.validator.stream import DeleteRequest, StreamRequest
-from internal.adapter.fastapi.response.json import JsonResponse
-from internal.adapter.fastapi.response.stream import StreamResponse
-from internal.adapter.fastapi.response.message import Message
+from .....internal.application.usecase.voice import VoiceUsecase
+from .....internal.adapter.gcs.gcs import GCS
+from .....internal.adapter.fastapi.validator.stream import DeleteRequest, StreamRequest
+from .....internal.adapter.fastapi.response.json import JsonResponse
+from .....internal.adapter.fastapi.response.stream import StreamResponse
+from .....internal.adapter.fastapi.response.message import Message
 
 
 class StreamController:

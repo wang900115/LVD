@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from internal.domain.entities.token import TokenClaims
+from ....internal.domain.entities.token import TokenClaims
 
 
 class TokenInterface(ABC):

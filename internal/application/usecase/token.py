@@ -1,5 +1,5 @@
-from internal.domain.entities.token import TokenClaims
-from internal.domain.interface.token import TokenInterface
+from ....internal.domain.entities.token import TokenClaims
+from ....internal.domain.interface.token import TokenInterface
 
 
 class TokenUsecase:

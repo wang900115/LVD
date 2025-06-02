@@ -1,6 +1,6 @@
 from fastapi import APIRouter, Depends
-from internal.adapter.fastapi.controller.user import UserController
-from internal.adapter.fastapi.middleware.jwt.jwt import JWTMiddleware
+from .....internal.adapter.fastapi.controller.user import UserController
+from .....internal.adapter.fastapi.middleware.jwt.jwt import JWTMiddleware
 
 class UserRouter:
 

@@ -1,10 +1,10 @@
-from internal.application.usecase.user import UserUsecase
-from internal.application.usecase.token import TokenUsecase
-from internal.domain.entities.user import User
-from internal.domain.entities.token import TokenClaims
-from internal.adapter.fastapi.validator.user import LoginRequest, LogoutRequest, RegistRequest
-from internal.adapter.fastapi.response.json import JsonResponse
-from internal.adapter.fastapi.response.message import Message
+from .....internal.application.usecase.user import UserUsecase
+from .....internal.application.usecase.token import TokenUsecase
+from .....internal.domain.entities.user import User
+from .....internal.domain.entities.token import TokenClaims
+from .....internal.adapter.fastapi.validator.user import LoginRequest, LogoutRequest, RegistRequest
+from .....internal.adapter.fastapi.response.json import JsonResponse
+from .....internal.adapter.fastapi.response.message import Message
 from datetime import datetime
 
 

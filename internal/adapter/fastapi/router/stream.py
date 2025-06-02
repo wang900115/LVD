@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from internal.adapter.fastapi.controller.stream import StreamController
+from .....internal.adapter.fastapi.controller.stream import StreamController
 
 
 class StreamRouter:

@@ -1,4 +1,5 @@
 from google.cloud import storage
+from google.oauth2 import service_account
 from typing import BinaryIO
 
 # def downloadAudioStream(blobName: str) -> BinaryIO:
@@ -11,7 +12,7 @@ from typing import BinaryIO
 class GCS:
 
     def __init__(self, buckName: str):
-        self.client = storage.Client()
+        self.client = storage.Client(credentials=service_account.Credentials.from_service_account_file("C:\\Users\\a0970\\2025\\2025 04-06\\LVD\\config\\angelic-hold-461004-k3-116c6af34d65.json"), project="803")
         self.bucket = self.client.bucket(buckName)
 
     def Upload(self, file: bytes, filename: str, type: str) -> None:
@@ -25,5 +26,5 @@ class GCS:
         blob = self.bucket.blob(blobName)
         if not blob.exists():
             raise FileNotFoundError(
-                f"Blob '{blobName}' not found in bucket '{BUCKET_NAME}'")
+                f"Blob '{blobName}' not found in bucket '{self.bucket}'")
         blob.delete

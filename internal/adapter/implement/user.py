@@ -1,9 +1,9 @@
 from sqlalchemy.orm import Session
 from werkzeug.security import check_password_hash, generate_password_hash
-from internal.domain.interface.user import UserInterface
-from internal.adapter.sqlalchemy.model.user import UserTable
-from internal.domain.entities.user import User
-from internal.adapter.sqlalchemy.validtor.user import UserValidator
+from ....internal.domain.interface.user import UserInterface
+from ....internal.adapter.sqlalchemy.model.user import UserTable
+from ....internal.domain.entities.user import User
+from ....internal.adapter.sqlalchemy.validtor.user import UserValidator
 
 class UserImplement(UserInterface):
 
@@ -40,6 +40,12 @@ class UserImplement(UserInterface):
             resultUser.password = generate_password_hash(validatedUser.password, "pbkdf2:sha256")
         self.db.commit()
         self.db.refresh(resultUser)
+        return resultUser.Domain()
+    
+    def DeleteUser(self, username):
+        resultUser = self.QueryUser(username)
+        self.db.delete(resultUser)
+        self.db.commit()
         return resultUser.Domain()
     
     def Login(self, username: str, password: str) -> User:

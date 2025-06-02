@@ -1,4 +1,4 @@
-from internal.domain.entities.token import TokenClaims
+from .....internal.domain.entities.token import TokenClaims
 from datetime import datetime
 import jwt
 

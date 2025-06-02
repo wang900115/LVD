@@ -1,7 +1,7 @@
-from internal.domain.interface.voice import VoiceInterface
-from internal.domain.entities.voice import Voice
 from typing import List
-from internal.adapter.sqlalchemy.model.voice import VoiceTable
+from ....internal.domain.interface.voice import VoiceInterface
+from ....internal.domain.entities.voice import Voice
+from ....internal.adapter.sqlalchemy.model.voice import VoiceTable
 
 class VoiceUsecase:
 

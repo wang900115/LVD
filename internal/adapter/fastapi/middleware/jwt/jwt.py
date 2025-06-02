@@ -1,6 +1,6 @@
-from internal.application.usecase.token import TokenUsecase
-from internal.adapter.fastapi.response.json import JsonResponse
-from internal.adapter.fastapi.response.message import Message
+from ......internal.application.usecase.token import TokenUsecase
+from ......internal.adapter.fastapi.response.json import JsonResponse
+from ......internal.adapter.fastapi.response.message import Message
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
 

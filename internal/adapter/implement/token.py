@@ -1,7 +1,7 @@
 import redis.asyncio as redis
-from internal.domain.interface.token import TokenInterface
-from internal.adapter.redispool.model.token import TokenModel
-from internal.domain.entities.token import TokenClaims
+from ....internal.domain.interface.token import TokenInterface
+from ....internal.adapter.redispool.model.token import TokenModel
+from ....internal.domain.entities.token import TokenClaims
 from datetime import datetime, timedelta, timezone
 import jwt
 import secrets

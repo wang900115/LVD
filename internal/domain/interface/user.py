@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
-from internal.domain.entities.user import User
-from internal.adapter.sqlalchemy.model.user import UserTable
+from ....internal.domain.entities.user import User
+from ....internal.adapter.sqlalchemy.model.user import UserTable
 
 class UserInterface(ABC):
 

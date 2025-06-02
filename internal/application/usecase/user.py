@@ -1,6 +1,6 @@
-from internal.domain.interface.user import UserInterface
-from internal.domain.entities.user import User
-from internal.adapter.sqlalchemy.model.user import UserTable
+from ....internal.domain.interface.user import UserInterface
+from ....internal.domain.entities.user import User
+from ....internal.adapter.sqlalchemy.model.user import UserTable
 
 class UserUsecase:
     def __init__(self, usecase: UserInterface):

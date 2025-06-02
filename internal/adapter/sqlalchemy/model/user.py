@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Text
 from sqlalchemy.ext.declarative import declarative_base
-from internal.domain.entities.user import User
+from .....internal.domain.entities.user import User
 
 Base = declarative_base()
 
