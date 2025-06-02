@@ -8,7 +8,7 @@ class VoiceUsecase:
     def __init__(self, usecase: VoiceInterface):
         self.usecase = usecase
     
-    def CreateVoice(self, voice: Voice)-> str:
+    def CreateVoice(self, voice: Voice)-> Voice:
         return self.usecase.CreateVoice(voice)
 
     def QueryVoices(self, user_id: int) -> List[Voice]:
@@ -17,5 +17,5 @@ class VoiceUsecase:
     def QueryVoice(self,filename: str)-> VoiceTable:
         return self.usecase.QueryVoice(filename)
     
-    def DeleteVoice(self, filename: str) -> str:
+    def DeleteVoice(self, filename: str) -> Voice:
         return self.usecase.DeleteVoice(filename)

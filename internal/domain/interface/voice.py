@@ -18,5 +18,5 @@ class VoiceInterface(ABC):
         pass
 
     @abstractmethod
-    def DeleteVoice(self, filename: str)-> str:
+    def DeleteVoice(self, filename: str)->  Voice:
         pass

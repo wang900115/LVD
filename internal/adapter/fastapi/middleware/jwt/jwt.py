@@ -1,13 +1,14 @@
 from internal.application.usecase.token import TokenUsecase
-
+from internal.adapter.fastapi.response.json import JsonResponse
+from internal.adapter.fastapi.response.message import Message
 from starlette.middleware.base import BaseHTTPMiddleware
 from starlette.requests import Request
-from fastapi.responses import JSONResponse
 
 class JWTMiddleware(BaseHTTPMiddleware):
-    def __init__(self, app, tokenUsecase: TokenUsecase):
+    def __init__(self, app, tokenUsecase: TokenUsecase, response: JsonResponse):
         super().__init__(app)
         self.tokenUsecase = tokenUsecase
+        self.response = response
 
     async def dispatch(self, request, call_next):
         try:
@@ -18,10 +19,7 @@ class JWTMiddleware(BaseHTTPMiddleware):
             request.state.expires_at = token_data.expires_at
         
         except Exception as e:
-            return JSONResponse(
-                status_code=401,
-                content={"message": "Unauthorized", "detail": str(e)}
-            )
+            return self.response.authFailWithError(Message.accessDenied,e)
         
         return await call_next(request)
     
